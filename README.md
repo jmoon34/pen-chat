@@ -1,3 +1,7 @@
+This project is based on the tutorial found in (https://scrimba.com/g/greactchatkit)<br>
+After building the basic architecture following the tutorial, I added custom features following documentation of the ChatKit API.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
