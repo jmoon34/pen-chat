@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Chat from './components/Chat'
+import GetUserName from './components/GetUserName'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+	constructor() {
+		super()
+		this.state = {
+			currentUsername: '',
+			visibleScreen: "getUsernameScreen"
+		}
+		this.onUsernameSubmitted = this.onUsernameSubmitted.bind(this)
+	}
+
+	onUsernameSubmitted(username) {
+		fetch('http://localhost:3001/users', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ username }),
+		})
+			.then(response => {
+				this.setState({
+					currentUsername: username,
+					visibleScreen: 'Chat'
+				})
+			})
+			.catch(error => console.error('error', error))
+	}
+
+	render(){
+		if (this.state.visibleScreen === 'getUsernameScreen'){
+			return <GetUserName onSubmit={this.onUsernameSubmitted} />
+		}
+		if (this.state.visibleScreen === 'Chat') {
+			return <Chat currentUsername={this.state.currentUsername} />
+		}
+		
+	}
 }
 
-export default App;
+export default App
