@@ -1,5 +1,7 @@
-* This project is based on the tutorial found in (https://scrimba.com/g/greactchatkit)<br>
-* After building the basic architecture following the tutorial, I added custom features following documentation of the ChatKit API.
+* This project is based on the tutorial found in (https://scrimba.com/g/greactchatkit)
+* It is a basic chatting web application designed to be used by a small group of people.
+* After building the basic architecture following the tutorial, I added custom features referring to the Chatkit Documentation.
+* Only basic CSS (grids) was implemented, and the project was focused more on designing functional components compatible with the Chatkit.
 
 # Login Screen
 ![Login Screen](/public/login.png?raw=true "Login Screen")
