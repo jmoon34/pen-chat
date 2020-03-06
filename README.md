@@ -1,21 +1,25 @@
 This project is based on the tutorial found in (https://scrimba.com/g/greactchatkit)<br>
 After building the basic architecture following the tutorial, I added custom features following documentation of the ChatKit API.
 
-## Login Screen
+# Login Screen
 ![Login Screen](/public/login.png?raw=true "Login Screen")
 
-## Lobby
+<br><br>
+
+# Lobby
 ![Lobby](/public/lobby.png?raw=true "Lobby")
 
 
 Joining chatroom will make the user bound to it, enabling functionalities such as notifying when somebody from that chatroom comes online.
 
-## Chatroom
+<br><br>
+
+# Chatroom
 ![Chatroom](/public/chatroom.png?raw=true "Chatroom")
 
 Bottom-left section displays a list of users that are online/offline.
 
-
+<br><br>
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
